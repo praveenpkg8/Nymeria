@@ -1,0 +1,6 @@
+# Git Ignore
+
+twEvn/
+.idea/
+twitter_api_key.json
+data.json
