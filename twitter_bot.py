@@ -17,6 +17,10 @@ r = requests.post(
     auth=(data.get('api_key'), data.get('api_secret_key')))
 
 
+tweet_id_data = open("data.json", "r")
+tweet_id = json.load(tweet_id_data)
+tweet_id_json = json.dump(tweet_id)
+
 response_data = json.loads(r.text)
 access_token = response_data.get("access_token")
 
