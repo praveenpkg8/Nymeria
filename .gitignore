@@ -1,6 +1,7 @@
 # Git Ignore
 
 twEvn/
+twEnv/
 .idea/
 twitter_api_key.json
 data.json
