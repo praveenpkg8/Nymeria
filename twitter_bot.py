@@ -3,25 +3,15 @@ import json
 
 from urllib.parse import urlencode
 
-url="https://api.twitter.com/oauth2/token"
 
-api_file = open("twitter_api_key.json", "r")
-data = json.load(api_file)
-api_file.close()
-r = requests.post(
-    url,
-    data=data,
-    verify=False,
-    allow_redirects=False,
-    auth=(data.get('api_key'), data.get('api_secret_key')))
+
 
 
 tweet_id_data = open("data.json", "r")
 tweet_id = json.load(tweet_id_data)
 tweet_id_json = json.dump(tweet_id)
 
-response_data = json.loads(r.text)
-access_token = response_data.get("access_token")
+
 
 Authorization = "Bearer {}".format(access_token)
 headers = {"Authorization": Authorization}
