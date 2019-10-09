@@ -54,4 +54,4 @@ class TweetService(object):
             headers=headers
         )
         if response.status_code == 200:
-            LOG.info("retweeted tweet => {}".format(tweet_id))
+            logging.info("retweeted tweet => {}".format(tweet_id))
