@@ -49,6 +49,6 @@ def beat():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
     # heart_beat = threading.Thread(target=beat)
     # heart_beat.start()
